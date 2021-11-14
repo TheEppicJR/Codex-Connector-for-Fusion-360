@@ -38,7 +38,7 @@ _handlers = []
 
 def getENV():
     #envvars = os.getenv('OPENAI_API_KEY')
-    os.environ.get('OPENAI_API_KEY')
+    envvars = os.environ.get('OPENAI_API_KEY')
     if envvars and envvars != "":
         return envvars
     return None
