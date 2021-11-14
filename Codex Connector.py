@@ -26,7 +26,7 @@ import openai
 import time
 import datetime
 from os import path
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 #import pandas
 #import numpy
 
@@ -34,9 +34,11 @@ _app: adsk.core.Application = None
 _ui: adsk.core.UserInterface = None
 _handlers = []
 
+#load_dotenv()
 
 def getENV():
-    envvars = os.environ.get('OPENAI_API_KEY')
+    #envvars = os.getenv('OPENAI_API_KEY')
+    os.environ.get('OPENAI_API_KEY')
     if envvars and envvars != "":
         return envvars
     return None

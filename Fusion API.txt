@@ -8,7 +8,8 @@ Doccumentation
 	The Code examples for a object should be on the bottom of the page for a object
 General
 	The CAM API is pretty useless because there isnt enough features to acomplish most of what anyone would want to do with it
-	How are you intended to deal with other python requirments when you are distributing a addin? like a requirments.txt
+	IMHO everything shouldnt run on the main thread by default because then when something inevatibly fails the whole things dies, NX does this and its especially nice when you can cancel processes that are broken and are hanging
+	How are you intended to deal with other python requirments when you are distributing a addin? like a requirments.txt, just including them directly is kinda ass. "To do this you install the Python module in the same directory as your script or a subdirectory." is not something i really know how to do, i just want to be like 'pip install xxxxx' and any more effort than that is too much of a barrier to entery (I spent like 6 hours stummped on this problem the first time i tried to use the fusion api)
 	Its not obvious how important all the deleteMe()'s in the stop method are, and if you copy code from multiple examples you get unclear error messages every time you try to reload the addin without reloading Fusion
 	It would be really nice to have a way to store Secrets in Fusion (like API keys to web connected addins)
 	The Selection Filter should allow graphical objects (mainly to unselect objects that that were deleted in the operation)
@@ -29,4 +30,5 @@ Geometry
 
 TLDR: Doing any actual geometric computation has a very steep learning curve because the doccumentation is confusing and hard to follow, and its hard to know what you need
 
+	As someone with a more MechE background there are too many big hurtles to jump to be able to get a lot done, and these this document is supposed to doccument most of the problems i faced
 	It would be nice to have a addin that would save the modle and structure of a doccument to be able to copy it, ie CAD a bolt, see what the object structure of what you caded is, and directly copy it to make a API that CAD's a bolt parametricly
