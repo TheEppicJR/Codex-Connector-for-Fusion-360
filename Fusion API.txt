@@ -1,5 +1,5 @@
 Doccumentation
-	Right clicking and poening in a new tab dose not work in the API docs, its incrediby annoying
+	Right clicking and opening in a new tab dose not work in the API docs, its incrediby annoying
 	For methods and properties of a Object should show more basic info about them (ie a link to the object(s) required in the argument and preferably just have all the information for the method in a drop down instead of giving it a whole page, I end up needing like 50 tabs because all the information i need is on diffrent tabs
 	More of the information should be in header files
 	The code examples should be written with better CAD practices shown, primarily it would be useful to see more code for like properly dimentioning features and ect, which is not shown in the existing samples
