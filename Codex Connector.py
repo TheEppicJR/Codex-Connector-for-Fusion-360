@@ -26,6 +26,7 @@ import openai
 import time
 import datetime
 from os import path
+from dotenv import load_dotenv
 #import pandas
 #import numpy
 
