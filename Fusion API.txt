@@ -1,0 +1,32 @@
+Doccumentation
+	Right clicking and poening in a new tab dose not work in the API docs, its incrediby annoying
+	For methods and properties of a Object should show more basic info about them (ie a link to the object(s) required in the argument and preferably just have all the information for the method in a drop down instead of giving it a whole page, I end up needing like 50 tabs because all the information i need is on diffrent tabs
+	More of the information should be in header files
+	The code examples should be written with better CAD practices shown, primarily it would be useful to see more code for like properly dimentioning features and ect, which is not shown in the existing samples
+	The CommandInputs sample in particular is very hard to follow because the examples for every CommandInput are all intertwined
+	The code examples should have code highlighting
+	The Code examples for a object should be on the bottom of the page for a object
+General
+	The CAM API is pretty useless because there isnt enough features to acomplish most of what anyone would want to do with it
+	How are you intended to deal with other python requirments when you are distributing a addin? like a requirments.txt
+	Its not obvious how important all the deleteMe()'s in the stop method are, and if you copy code from multiple examples you get unclear error messages every time you try to reload the addin without reloading Fusion
+	It would be really nice to have a way to store Secrets in Fusion (like API keys to web connected addins)
+	The Selection Filter should allow graphical objects (mainly to unselect objects that that were deleted in the operation)
+	The Selection Filter sholud have the chain selection helper thing that exists in the CAM enviorment as a option
+	(As a side note how to unselect a element of a chain in the normal chamfer and fillet features is a mistery to me, it should be obvious)
+	What does createForAssemblyContext really do?
+	It would be nice to have a actually documented list of the layout of the UI and what things are named to place them in the UI, its hard to know what things are called in the UI dump vs their symbol that I already know
+	ObjectCollection.create() should return a ObjectCollection to me as far as Python is concerned so I dont have to do...
+		delFaces: adsk.core.ObjectCollection = adsk.core.ObjectCollection.create()
+		...all the time so it knows what type it is, it may exist with some other types as well (valueInput.createByXxxx and Application.get() are examples)
+	Any argument of messageBox should be cast to a str, its annoying to have to do it myself every time and forgetting
+
+Geometry
+	Cells, CoEdges, Loops, Lumps, Shells, Vertices, and Wires are not given a good introduction
+	Having a Object that is just a collection of one type of geometry Objects when every feature wants a Object Collection is kinda weird and confusing to deal with first
+	The Chamfer Feature API should tell me what edge is the problem if it fails
+	If SurfaceDeleteFaceFeature splits a body into two bodies then they should be returned when I access the .bodies property, same goes for .faces
+
+TLDR: Doing any actual geometric computation has a very steep learning curve because the doccumentation is confusing and hard to follow, and its hard to know what you need
+
+	It would be nice to have a addin that would save the modle and structure of a doccument to be able to copy it, ie CAD a bolt, see what the object structure of what you caded is, and directly copy it to make a API that CAD's a bolt parametricly
